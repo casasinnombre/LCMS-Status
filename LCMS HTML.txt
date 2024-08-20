@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is the LCMS Working Right Now?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        #status {
+            font-size: 2em;
+            color: #333;
+        }
+        #status.yes {
+            color: green;
+        }
+        #status.no {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>Is the LCMS Working Right Now?</h1>
+        <p id="status" class="no">No</p>
+    </div>
+
+    <script>
+        // Function to update the status
+        function updateStatus(status) {
+            const statusElement = document.getElementById('status');
+            if (status === 'yes') {
+                statusElement.textContent = 'Yes';
+                statusElement.className = 'yes';
+            } else {
+                statusElement.textContent = 'No';
+                statusElement.className = 'no';
+            }
+        }
+
+        // Example: To change the status to 'yes', uncomment the line below
+        // updateStatus('yes');
+        
+        // To change the status, simply call updateStatus('yes') or updateStatus('no') in the console
+    </script>
+
+</body>
+</html>
